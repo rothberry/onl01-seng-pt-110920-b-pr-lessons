@@ -1,6 +1,13 @@
 require 'pry'
 class Song
   attr_accessor :name, :artist_name
+  # def name=(name)
+  #   @name = name
+  # end
+  # def name
+  #   @name
+  # end
+
   @@all = []
 
   def self.all
@@ -44,4 +51,9 @@ class Song
 
 
 end
+p Song.all
 
+s = Song.new
+s.save
+
+p Song.all
