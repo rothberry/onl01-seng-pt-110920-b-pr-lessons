@@ -85,7 +85,6 @@ end
 
 lotr_api = 'https://the-one-api.dev/v2/movie'
 lotr_endpoints = %W(book movie character quote)
-API_KEY = 'nVotzckWT7ZyKKvyVwL6'
 
 
 binding.pry
