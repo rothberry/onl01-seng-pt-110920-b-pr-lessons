@@ -22,73 +22,43 @@ class CLI
     while input != 'exit'
       case input
       when '1'
-        movies = Api.get_endpoint('films')
-        movies["results"].each do |movie|
-          display_movie(movie)
-        end
-        puts ''
+        # TODO List all movies
         # binding.pry
       when '2'
-        people = Api.get_endpoint('people')
-        next_page_url = people["next"]
+        # TODO List all characters (10 per page)
         # binding.pry
-        people["results"].each do |person|
-          display_person(person)
-        end
-        puts ''
-        puts 'Would you like to see more? (y/n)'
-        input = gets.strip.downcase
-        while input != 'n'
-          people = Api.call_api(next_page_url)
-          next_page_url = people["next"]
-          people["results"].each do |person|
-            display_person(person)
-          end  
-          puts 'Would you like to see more? (y/n)'
-          input = gets.strip.downcase
-        end
       when '3'
         film_prompt
         input = gets.strip.downcase
-        results = Api.search_endpoint('films', input)
-        display_movie(results[0])
+        # TODO Search for movies that match input
         # binding.pry
       when '4'
         people_prompt
         input = gets.strip.downcase
-        results = Api.search_endpoint('people', input)
-        display_person(results[0])
+        # TODO Search for characters that match input
         # binding.pry
       when 'exit'
         goodbye
       else
         print_error
       end
-      prompt
-      input = gets.strip.downcase
+      # TODO Loop back to start
     end
   end
 
   def display_movie(movie)
-    episode_id    = movie["episode_id"]
-    title         = movie["title"]
-    opening_crawl = movie["opening_crawl"]
-    puts "Episode: #{episode_id}\t#{title}"
-    scroll_credits(opening_crawl)
+    # TODO Use episode_id, title, and opening_crawl to display one movie
+    
   end
-
+  
   def display_person_full(person)
-    name = person["name"]
-    films = person["films"]
-    homeworld = Api.call_api(person["homeworld"])["name"]
-    puts "Name:\t\t#{name}"
-    puts "Films:\t\t#{films}"
-    puts "HomeWorld:\t#{homeworld}"
+    # TODO Use name, films, homeworld, to display one character
+    
   end
   
   def display_person(person)
-    name = person["name"]
-    puts "Name:\t#{name}"
+    # TODO Just display person's name
+
   end
 
   def scroll_credits(crawl_str)

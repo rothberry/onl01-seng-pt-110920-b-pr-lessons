@@ -7,7 +7,4 @@ gem 'httparty'
 
 gem "tty-prompt"
 
-# gem 'env', '~> 0.3.0'
 gem 'dotenv' #, '~> 2.7', '>= 2.7.6'
-# gem 'rmagick', '~> 2.15', '>= 2.15.4'
-# gem 'asciiart', '~> 0.0.9'

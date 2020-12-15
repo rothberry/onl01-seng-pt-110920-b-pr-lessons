@@ -2,28 +2,39 @@ class Api
 
   URL       = 'https://swapi.dev/api/'
   ENDPOINTS = %W(people planets films species vehicles starship)
+  search    = '?search='
 
   def self.get_endpoint(endpoint)
-    self.call_api("#{URL}#{endpoint}")
+    # TODO Create class method to send get request to endpoint
+    
   end
 
   def self.search_endpoint(endpoint, search_term)  
-    self.call_api("#{URL}#{endpoint}/?search=#{search_term}")["results"]
+    # TODO use search term and endpoint
+
   end
-
-
-  
-  # private
+ 
   def self.call_api(url)
-    HTTParty.get(url)
+    # TODO use HTTParty to call api as a string
+
   end
     
 end
 
 
 =begin
-  # * SWAPI
+  # * SWAPI DOCS
 
+  Format => 
+  {
+    "count":      number of total results,
+    "next":       url to next 10 results,
+    "previous":   url to previous 10 results,
+    results:      array of results (limit 10)
+  }
+  
+  /films
+  /people
   /people/:id
   /people/schema
 
