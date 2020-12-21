@@ -21,7 +21,7 @@ class CLI
     # gets.strip => takes user input from the console
     input = gets.strip
     # this is an infinite loop, unless the user exits
-    while input != 'exit'
+    # while input != 'exit'
       # case statement is 
       # if -> elsif -> elsif -> elsif -> else loop 
       # with one deciding variable
@@ -77,12 +77,14 @@ class CLI
       when 'exit'
         goodbye
       else
+        # error handling
         print_error
       end
       # TODO Loop back to start
+      menu # called recursively
       prompt
       input = gets.strip
-    end
+    # end
   end
 
   def display_movie(movie)
@@ -134,6 +136,7 @@ class CLI
   def goodbye
     puts "Seeya"
     exit
+    # return "exit"
   end
 
 end
