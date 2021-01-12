@@ -1,0 +1,2 @@
+ALTER TABLE fans
+ADD COLUMN artistId INTEGER;
