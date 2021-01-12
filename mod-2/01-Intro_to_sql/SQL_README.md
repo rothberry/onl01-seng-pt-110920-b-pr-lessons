@@ -8,21 +8,15 @@ Tools:
 
 
 ## What is SQL?
-Structured Query Language
 
 
 ## What is SQL used for?
-Database Manipulation
-Information Storage
-Information persistance
-Sharing Information - servers that multiple people can access
-Storing relationships
+
 
 ## What kind of operations can we do in SQL?
-Create Data
-Read Data
-Update Data
-Delete Data
+
+
+
 
 ## SQL Queries
 PRAGMA table_info(table_name); => show columns
@@ -63,4 +57,3 @@ PRAGMA table_info(table_name); => show columns
 9. Write a SQL Query to return the name of all of the artists in the 'Pop' Genre
   ```SQL
   ```
-

@@ -1,4 +1,0 @@
-CREATE TABLE IF NOT EXISTS fans (
-  id    INTEGER PRIMARY KEY,
-  name  TEXT
-);
