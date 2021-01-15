@@ -1,0 +1,8 @@
+ALTER TABLE fans
+ADD COLUMN hypeLevel INTEGER;
+
+ALTER TABLE fans
+ADD COLUMN showsSeen INTEGER;
+
+ALTER TABLE fans
+ADD COLUMN groupieName TEXT;
