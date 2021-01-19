@@ -1,6 +1,6 @@
 class Movie
 
-  attr_accessor :title, :genre, :actors
+  attr_accessor :title, :genre, :year
   attr_reader   :id
 
   @@all = []
@@ -9,18 +9,48 @@ class Movie
     args.each do |key, val|
       self.send("#{key}=", val)
     end
-    @id = @@all.count + 1
+    # @id = @@all.count + 1
+  end
+
+  def self.create_table
+    sql = <<-DOC
+      CREATE TABLE IF NOT EXISTS movies (
+        id      INTEGER PRIMARY KEY,
+        title   TEXT,
+        genre   TEXT
+      )
+    DOC
+    data = DB[:conn].execute(sql)
+  end
+  
+  def self.drop_table
+    sql = <<-DOC
+    DROP TABLE movies
+    DOC
+    data = DB[:conn].execute(sql)
   end
 
   def self.all
-    @@all
+    # ? NoDB
+    # @@all
+    # ? With DB
+    sql = <<-DOC
+      SELECT * FROM movies
+    DOC
+    data = DB[:conn].execute(sql)
   end
 
   def save
+    # ? NoDB
     @@all.push(self)
+    
+    # ? With DB
+    # sql = <<-DOC
+    # DOC
   end
-
+  
   def self.find_by_title(title)
+    # ? NoDB
     self.all.select do |movie|
       movie.title == title
     end

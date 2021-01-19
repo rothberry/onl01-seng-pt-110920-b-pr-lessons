@@ -3,33 +3,33 @@ movie_data = [
   {
     "title": "Kiss Kiss, Bang, Bang",
     "genre": "Thriller",
-    "actors": ["RDJ", "Val Kilmer", "Michelle Monaghan"]
+    "year": 2005
   },
   {
     "title": "The Godfather",
     "genre": "Crime",
-    "actors": ["Marlon Brando", "Al Pacino", "James Caan"]
+    "year": 1972
   },
   {
     "title": "Scott Pilgrim",
     "genre": "Comic",
-    "actors": ["Michael Cera", "Mary Elizabeth Winstead", "Kieran Culkin"]
+    "year": 2010
   },
   {
     "title": "The Prestige",
     "genre": "Magic",
-    "actors": ["Christian Bale", "Hugh Jackman", "Scarlett Johansson"]
+    "year": 2006
   },
   {
     "title": "Deadpool",
     "genre": "Nonsense",
-    "actors": ["Ryan Reynolds", "Morena Baccarin", "T.J. Miller"]
+    "year": 2016
   }
 ]
 
 
 # Creates new Movie objects
 
-movie_data.each do |movie|
-  Movie.new(movie).save
-end
+# movie_data.each do |movie|
+#   Movie.new(movie).save
+# end
