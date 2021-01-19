@@ -17,7 +17,8 @@ class Movie
       CREATE TABLE IF NOT EXISTS movies (
         id      INTEGER PRIMARY KEY,
         title   TEXT,
-        genre   TEXT
+        genre   TEXT,
+        year    INTEGER
       )
     DOC
     data = DB[:conn].execute(sql)
