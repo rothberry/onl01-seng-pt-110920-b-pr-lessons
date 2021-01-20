@@ -31,6 +31,6 @@ movie_data = [
 
 # Creates new Movie objects
 
-movie_data.each do |movie|
-  Movie.new(movie).save
-end
+# movie_data.each do |movie|
+#   Movie.new(movie).save
+# end

@@ -16,7 +16,7 @@ GEM
       macaddr (~> 1.0)
 
 PLATFORMS
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   json
@@ -26,4 +26,4 @@ DEPENDENCIES
   uuid (~> 2.3, >= 2.3.8)
 
 BUNDLED WITH
-   2.2.4
+   2.1.4
