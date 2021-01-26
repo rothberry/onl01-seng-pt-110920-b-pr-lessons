@@ -10,9 +10,9 @@ seeded_artists = 10
 seeded_artists.times do 
   name = Faker::Music.band
   # name = Faker::FunnyName.name
-  age = rand(20..80)
+  year_started = rand(1970..2020)
 
-  Artist.create(name: name, age: age)
+  Artist.create(name: name, year_started: year_started)
 end
 
 # Create Songs and relations

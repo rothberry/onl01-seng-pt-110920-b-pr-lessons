@@ -2,8 +2,13 @@ require_relative './config/environment'
 require 'sinatra/activerecord/rake'
 
 desc "Start app console"
-task :console do
+task :c do
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   ARGV.clear
+  cols = Rake.application.terminal_width
+  system "clear"
+  puts "*" * cols
+  puts "  Welcome to the Rake Console  ".center(cols, "*")
+  puts "*" * cols
   Pry.start
 end
