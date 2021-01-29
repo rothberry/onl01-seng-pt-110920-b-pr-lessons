@@ -61,7 +61,14 @@ class Movie # as an ORM
       INSERT INTO movies (title, genre, year)
       VALUES (?, ?, ?);
     SQL
+    # DB[:conn].begin_transaction
+    # DB[:conn].execute(insert_query, self.title, self.genre, self.year)
+    # DB[:conn].execute(insert_query, self.title, self.genre, self.year)
+    # DB[:conn].execute(insert_query, self.title, self.genre, self.year)
+    # DB[:conn].execute(insert_query, self.title, self.genre, self.year)
+    # DB[:conn].execute(insert_query, self.title, self.genre, self.year)
     DB[:conn].execute(insert_query, self.title, self.genre, self.year)
+    # DB[:conn].commit
     self.id = DB[:conn].last_insert_row_id
   end
 
