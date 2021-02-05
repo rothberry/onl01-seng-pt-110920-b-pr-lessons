@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2021_01_28_232458) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "super_album_id"
     t.integer "album_id"
   end
 
