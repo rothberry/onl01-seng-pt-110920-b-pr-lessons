@@ -1,0 +1,14 @@
+<h1>Characters</h1>
+
+<% @characters.each do |char| %>
+   <p> <%= char.name %></p> 
+   <p> <%#= char.race %></p> 
+<% end %>
+
+<%#
+   I raw ruby how would we display all the characters?
+   
+   characters.each do |char|
+     puts char.name
+     puts char.race
+   end %>
