@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210210001239) do
+ActiveRecord::Schema.define(version: 20210211225136) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20210210001239) do
   create_table "weapons", force: :cascade do |t|
     t.string   "name"
     t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "character_id"
   end
 
 end

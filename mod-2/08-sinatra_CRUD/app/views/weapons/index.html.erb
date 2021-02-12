@@ -1,0 +1,8 @@
+<h1>Weapons</h1>
+<ul>
+  <% @weapons.each do |weapon| %>
+    <li>
+      <a href="/weapons/<%= weapon.id %>"><%= weapon.name %></a>
+    </li>
+  <% end %>
+</ul>

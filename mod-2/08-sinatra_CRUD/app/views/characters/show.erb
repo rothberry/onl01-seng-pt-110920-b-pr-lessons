@@ -1,0 +1,12 @@
+<h1>You've Found <%= @character.name %> the <%= @character.race %> </h1>
+
+
+<a href="/characters/<%= @character.id %>/edit">Edit Character</a>
+<br>
+<form action="/characters/<%= @character.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="DELETE??????">
+</form>
+
+<br>
+<a href="/characters">Go Back to all Characters</a>
