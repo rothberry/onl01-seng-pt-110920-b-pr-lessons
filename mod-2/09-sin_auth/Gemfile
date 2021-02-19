@@ -11,3 +11,7 @@ gem "pry"
 gem "dotenv", "~> 2.7"
 
 gem "bcrypt", "~> 3.1"
+
+gem "activesupport", "~> 4.2"
+
+gem "sinatra-flash", "~> 0.3.0"

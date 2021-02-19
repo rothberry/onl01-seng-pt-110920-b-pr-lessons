@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     user = User.new(params)
     # manually check if email already exists
     # check if both aren't empty
+    # hasOne = params["password"].include?("1")
+    # pw can't contain a "1"
     if !!user.email || !!user.password || !User.find_by(email: params["email"])
       # success!
       user.save
@@ -17,6 +19,7 @@ class UsersController < ApplicationController
       redirect "/characters"
     else
       # failure!
+      flash["message"] = "Can't have Number 1"
       redirect "/signup"
     end
   end
@@ -31,14 +34,25 @@ class UsersController < ApplicationController
       # Successful login
       session["user_id"] = user.id
       puts "*" * 99
-      puts session
+      puts session["user_id"]
+      puts "*" * 99
       redirect "/characters"
     else
       # Failed login
+      cols = Rake.application.terminal_width
+      puts "*" * cols
+      puts flash
+      puts "*" * cols
+      flash["message"] = "Wrong Login Info"
       redirect "/login"
     end
   end
   # get, post, or delete
-  delete "/logout" do
+  post "/logout" do
+    session.clear
+    puts "*" * 99
+    puts session["user_id"]
+    puts "*" * 99
+    redirect "/login"
   end
 end
